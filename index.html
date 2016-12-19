@@ -74,12 +74,12 @@
     <hr>
     <table class="table table-bordered table-hover">
         <tr class="text-danger">
-            <th class="text-sm-center">序号</th>
-            <th class="text-sm-center">名字</th>
-            <th class="text-sm-center">年龄</th>
-            <th class="text-sm-center">操作</th>
+            <th class="text-center">序号</th>
+            <th class="text-center">名字</th>
+            <th class="text-center">年龄</th>
+            <th class="text-center">操作</th>
         </tr>
-        <tr class="text-sm-center" v-for="(v,k) in myData">
+        <tr class="text-center" v-for="(v,k) in myData">
             <td>{{k + 1}}</td>
             <td>{{v.name}}</td>
             <td>{{v.age}}</td>
@@ -90,7 +90,7 @@
             </td>
         </tr>
         <tr v-show="myData.length!=0">
-            <td colspan="4" class="text-sm-right">
+            <td colspan="4" class="text-right">
                 <button class="btn btn-danger btn-sm" v-on:click="goDelete(-2)" data-toggle="modal"
                         data-target="#layer">删除全部
                 </button>
@@ -113,7 +113,7 @@
                     </button>
                     <h4 class="modal-title">{{deleteTips}}</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body text-right">
                     <button class="btn btn-primary btn-sm" data-dismiss="modal">取消</button>
                     <button class="btn btn-danger btn-sm" data-dismiss="modal" v-on:click="deleteMsg(nowIndex)">确认</button>
                 </div>
